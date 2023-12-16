@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audioplayer</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="icon" href="./assets/img/favicon/favicon.ico">
+</head>
+<body>
+    <div class="wrapper">
+        <img src="./assets/img/image2.png" id="background" />
+        <audio src="./assets/audio/rianna.mp3" id="song"></audio>
+        <div class="audioplayer">
+           <div class="audioplayer-image">
+                <img src="./assets/img/image2.png" id="thumbnail">
+            </div>
+            <div class="audioplayer-content">
+                <div class="audioplayer-title">
+                    <div class="song-artist">Rihanna</div>
+                    <div class="song-title">Bitch Have My Money</div>
+                </div>
+                <div class="audioplayer-buttons">
+                    <div class="wrapper-arrow" onclick="previousSong()">
+                        <img src="./assets/img/svg/icon-prev.svg"  id="previous-song">
+                    </div>
+                    <div class="wrapper-arrowplay" onclick="playPause()">
+                        <img src="./assets/img/svg/icon-play.svg"  id="play-pause">
+                    </div>
+                    <div class="wrapper-arrow" onclick="nextSong()">
+                        <img src="./assets/img/svg/icon-next.svg"  id="next-song">
+                    </div>
+                </div>
+            </div>
+            <div class="audioplayer-progressbar">
+                <!-- Input element for progress bar - min=0 starting value of every song - max length will change per song so leave empty -->
+                <input 
+                    type="range" 
+                    id="progress-bar" 
+                    min="0" 
+                    max="" 
+                    value="0" 
+                    onchange="changeProgressBar()" >
+                <div class="time-wrapper">
+                    <div class="currentTime"></div>
+                    <div class="durationTime"></div>  
+                </div>
+            </div>           
+        </div>
+        <footer class="footer">           
+                <ul class="footer__list">
+                    <li>2023</li>
+                    <li><a href="https://rs.school/js-stage0/" target="_blank"><img class="footer__logo" src="./assets/img/logo-rsshool.svg" alt="logo-rsshool"></a></li>
+                    <li><a class="footer__link" href="https://github.com/Tatsiana-prog" target="_blank">Tatsiana</a></li>
+                </ul>           
+        </footer>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
